@@ -69,8 +69,8 @@ for m=1:numel(n1)
     end
     Q=rs1_maxstrength;
     R=rr2_maxstrength;
-    rho1h_2hrs(m)=rs1_maxtough; %to extract the aspect ratios at maximum toughness
-    rho2h_2hrs(m)=rr2_maxtough;
+    rho1h_2hrs(m)=rs1(rs1_maxtough); %to extract the aspect ratios at maximum toughness
+    rho2h_2hrs(m)=rr2(rr2_maxtough);
     strengthatmaxtough(m)=Y(rs1_maxtough,rr2_maxtough);
     stiffnessatmaxtough(m)=Z(rs1_maxtough,rr2_maxtough);
 end
@@ -137,8 +137,8 @@ for m=1:numel(n2)
     R=rs2_maxstrength;
     strengthatmaxtough(m)=Y(rr1_maxtough,rs2_maxtough);
     stiffnessatmaxtough(m)=Z(rs1_maxtough,rr2_maxtough);
-    rho1h_2hsr(m)=rr1_maxtough; %to extract the aspect ratios at maximum toughness
-    rho2h_2hsr(m)=rs2_maxtough;
+    rho1h_2hsr(m)=rr1(rr1_maxtough); %to extract the aspect ratios at maximum toughness
+    rho2h_2hsr(m)=rs2(rs2_maxtough);
 %     for k=1:1:size(Q)
 %         fprintf('Toughness at (')
 %         fprintf(num2str(Q(k)))
